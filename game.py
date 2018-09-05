@@ -1,4 +1,3 @@
-Hello	
 def weapon_response (weapon_answer):
 	if "sword" in weapon_answer:
 		return  "Ah the mighty sword, good choice."
