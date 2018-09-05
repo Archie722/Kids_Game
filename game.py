@@ -1,30 +1,31 @@
 def weapon_response (weapon_answer):
+	""" handles the response when choosing a weapon """
 	if "sword" in weapon_answer:
-		return  "Ah the mighty sword, good choice."
+		return  "Ah the mighty sword, good choice %s." % name
 
 	elif "wand" in weapon_answer:
-		return  "Ah we have a wizard do we?"
+		return  "Ah we have a wizard do you %s?" % name
 
 	elif "axe" in weapon_answer:
 		return "The Axe, good for chopping down trees, and maybe some heads!"
 
 	elif "bat" in weapon_answer:
-		return "Bat, good choice"
+		return "Bat, good choice %s" % name
 
 	elif "knife" in weapon_answer:
-		return "Be carfull, its sharp!"
+		return "Be carfull %s, its sharp!" % name
 
 	elif "spoon" in weapon_answer:
-		return "How did I know you would choose this? Always thinking with your stomach!"
+		return "How did I know you would choose this %s? Always thinking with your stomach!" % name
 
 	elif "bow" in weapon_answer:
-		return "Well, we are Archers afterall"
+		return "Well, you are %s Archer afterall" % name
 
 	elif "gun" in weapon_answer:
-		return "Be careful, you only have 1 bullet!"
+		return "Be careful %s, you only have 1 bullet!" % name
 
 	elif "lipstick" in weapon_answer:
-		return "Why would you need lipstick, we are going on an adventure!"
+		return "Why would you need lipstick %s, we are going on an adventure!" % name
 
 	elif "flamethrower" in weapon_answer:
 		return "Carefull you dont set yourself on fire!"
@@ -32,9 +33,11 @@ def weapon_response (weapon_answer):
 	else:
 		return "Sorry, thats not in the list, so you cant have it."
 
+name = raw_input("welcome to the game, whats your name? \n ")
 
+print "Why hello %s! \n" % name
 
-print """"First you need to pick 6 out of the 10 weapons in the list:
+print """First you need to pick 6 out of the 10 weapons in the list:
 			1. Sword
 			2. Wand
 			3. Axe
