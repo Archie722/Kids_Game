@@ -56,7 +56,7 @@ def room_1():
 	if answer == "1":
 		print "\nI knew you were a fighter, now choose a weapon from your list %s\n" % weapon_list
 		chosen_weapon = raw_input ("> ")
-		if chosen_weapon == "sword":
+		if chosen_weapon in weapon_list and chosen_weapon == "sword":
 			print "\nAh, the sword good choice, now you need to roll an even number to win"
 			print "Otherwise you will die!\n"
 			raw_input("Press ENTER to roll \n ")
@@ -68,11 +68,13 @@ def room_1():
 			print " You got a : %d \n " % room1_sword
 			if room1_sword % 2 == 0:
 				print "You Win!!!"
+				weapon_list.remove(chosen_weapon)
+				level_2()
 			else:
 				print " You lose!!"
 				dead()
 
-		elif chosen_weapon == "wand":
+		elif chosen_weapon in weapon_list and chosen_weapon == "wand":
 			print "\nAh, the wand good choice, now you need to roll an even number to cas a magic spell"
 			print "Otherwise you will die!\n"
 			raw_input("Press ENTER to roll \n ")
@@ -84,11 +86,13 @@ def room_1():
 			print " You got a : %d \n " % room1_sword
 			if room1_sword % 2 == 0:
 				print "You Win!!!"
+				weapon_list.remove(chosen_weapon)
+				level_2()
 			else:
 				print " You lose!!"
 				dead()
 
-		elif chosen_weapon == "knife":
+		elif chosen_weapon in weapon_list and chosen_weapon == "knife":
 			print "\nAh, the knife good choice, now you need to roll an even number to win"
 			print "Otherwise you will die!\n"
 			raw_input("Press ENTER to roll \n ")
@@ -100,11 +104,13 @@ def room_1():
 			print " You got a : %d \n " % room1_sword
 			if room1_sword % 2 == 0:
 				print "You Win!!!"
+				weapon_list.remove(chosen_weapon)
+				level_2()
 			else:
 				print " You lose!!"
 				dead()
 
-		elif chosen_weapon == "axe":
+		elif chosen_weapon in weapon_list and chosen_weapon == "axe":
 			print "\nAh, the axe good choice, now you need to roll an even number to win"
 			print "Otherwise you will die!\n"
 			raw_input("Press ENTER to roll \n ")
@@ -116,15 +122,17 @@ def room_1():
 			print " You got a : %d \n " % room1_sword
 			if room1_sword % 2 == 0:
 				print "You Win!!!"
+				weapon_list.remove(chosen_weapon)
+				level_2()
 			else:
 				print " You lose!!"
 
-		elif chosen_weapon == "spoon":
+		elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
 			print "\nAh, the spoon, hungry at a time like this???"
 			print "your dead"
 			dead()
 
-		elif chosen_weapon == "gun":
+		elif chosen_weapon in weapon_list and chosen_weapon == "gun":
 			print "\nAh, the gun good choice, but you only have one bullet!"
 			print "You need an even number to shoot him!\n"
 			raw_input("Press ENTER to roll \n ")
@@ -136,15 +144,17 @@ def room_1():
 			print " You got a : %d \n " % room1_sword
 			if room1_sword % 2 == 0:
 				print "You Win!!!"
+				weapon_list.remove(chosen_weapon)
+				level_2()
 			else:
 				print " You lose!!"
 				dead()
 
-		elif chosen_weapon == "lipstick":
+		elif chosen_weapon in weapon_list and chosen_weapon == "lipstick":
 			print "\nAh, the lipstick, not the best weopon against a monster"
 			dead()
 
-		elif chosen_weapon == "bat":
+		elif chosen_weapon in weapon_list and chosen_weapon == "bat":
 			print "\nAh, the bat good choice, now you need to roll an even number to win"
 			print "Otherwise you will die!\n"
 			raw_input("Press ENTER to roll \n ")
@@ -156,11 +166,13 @@ def room_1():
 			print " You got a : %d \n " % room1_sword
 			if room1_sword % 2 == 0:
 				print "You Win!!!"
+				weapon_list.remove(chosen_weapon)
+				level_2()
 			else:
 				print " You lose!!"
 				dead()
 
-		elif chosen_weapon == "bow":
+		elif chosen_weapon in weapon_list and chosen_weapon == "bow":
 			print "\nAh, the bow good choice, now you need to roll an even number to win"
 			print "Otherwise you will die!\n"
 			raw_input("Press ENTER to roll \n ")
@@ -172,11 +184,13 @@ def room_1():
 			print " You got a : %d \n " % room1_sword
 			if room1_sword % 2 == 0:
 				print "You Win!!!"
+				weapon_list.remove(chosen_weapon)
+				level_2()
 			else:
 				print " You lose!!"
 				dead()
 
-		elif chosen_weapon == "flamethrower":
+		elif chosen_weapon in weapon_list and chosen_weapon == "flamethrower":
 			print "\nAh, the flamethrower good choice, now you need to roll an even number to win"
 			print "Otherwise you will die!\n"
 			raw_input("Press ENTER to roll \n ")
@@ -188,6 +202,8 @@ def room_1():
 			print " You got a : %d \n " % room1_sword
 			if room1_sword % 2 == 0:
 				print "You Win!!!"
+				weapon_list.remove(chosen_weapon)
+				level_2()
 			else:
 				print " You lose!!"
 				dead()
@@ -196,7 +212,8 @@ def room_1():
 		print "You have run away!! Try again and dont be such a scardie cat!"
 		dead()
 
-
+def level_2():
+	pass
 
 name = raw_input("welcome to the game, whats your name? \n ")
 
