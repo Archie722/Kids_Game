@@ -1,3 +1,4 @@
+test
 def weapon_response (weapon_answer):
 	""" handles the response when choosing a weapon """
 	if "sword" in weapon_answer:
