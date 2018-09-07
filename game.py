@@ -1,4 +1,4 @@
-
+# comment
 import random
 import time
 import sys
@@ -1050,7 +1050,7 @@ def room_6():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
-					
+
 				else:
 					print " You lose!!"
 					dead()
