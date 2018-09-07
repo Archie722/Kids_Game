@@ -2023,7 +2023,3 @@ weapon_list = [weapon_1, weapon_2, weapon_3, weapon_4, weapon_5, weapon_6]
 print "Ok, now you need to role a dice to choose a door:\n"
 
 level_1()
-
-print "Welcome to level 2! Now you need to role a dice to choose a door:\n"
-
-big_bad()
