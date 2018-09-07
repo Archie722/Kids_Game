@@ -48,7 +48,6 @@ def delay_print(s):
 
 def dead():
 	print "Try again another time"
-	start()
 
 def room_1():
 	print "you enter the room 1 and see a big monster"
@@ -56,156 +55,169 @@ def room_1():
 	print "fight - 1"
 	print "Run away - 2"
 	answer = raw_input("> ")
+	while True:
 		if answer == "1":
-		print "\nI knew you were a fighter, now choose a weapon from your list %s\n" % weapon_list
-		chosen_weapon = raw_input ("> ")
-		if chosen_weapon in weapon_list and chosen_weapon == "sword":
-			print "\nAh, the sword good choice, now you need to roll an EVEN number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			print "\nI knew you were a fighter, now choose a weapon from your list %s\n" % weapon_list
+			chosen_weapon = raw_input ("> ")
+			if chosen_weapon in weapon_list and chosen_weapon == "sword":
+				print "\nAh, the sword good choice, now you need to roll an EVEN number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+					break
+				else:
+					print " You lose!!"
+					dead()
+					break
+			elif chosen_weapon in weapon_list and chosen_weapon == "wand":
+				print "\nAh, the wand good choice, now you need to roll an even number to cas a magic spell"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+					break
+				else:
+					print " You lose!!"
+					dead()
+					break
+			elif chosen_weapon in weapon_list and chosen_weapon == "knife":
+				print "\nAh, the knife good choice, now you need to roll an even number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+					break
+				else:
+					print " You lose!!"
+					dead()
+					break
+			elif chosen_weapon in weapon_list and chosen_weapon == "axe":
+				print "\nAh, the axe good choice, now you need to roll an even number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+					break
+				else:
+					print " You lose!!"
+					break
+			elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
+				print "\nAh, the spoon, hungry at a time like this???"
+				print "your dead"
 				dead()
+				break
+			elif chosen_weapon in weapon_list and chosen_weapon == "gun":
+				print "\nAh, the gun good choice, but you only have one bullet!"
+				print "You need an even number to shoot him!\n"
+				raw_input("Press ENTER to roll \n ")
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "wand":
-			print "\nAh, the wand good choice, now you need to roll an even number to cas a magic spell"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+					break
+				else:
+					print " You lose!!"
+					dead()
+					break
+			elif chosen_weapon in weapon_list and chosen_weapon == "lipstick":
+				print "\nAh, the lipstick, not the best weopon against a monster"
 				dead()
+				break
+			elif chosen_weapon in weapon_list and chosen_weapon == "bat":
+				print "\nAh, the bat good choice, now you need to roll an even number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "knife":
-			print "\nAh, the knife good choice, now you need to roll an even number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+					break
+				else:
+					print " You lose!!"
+					dead()
+					break
+			elif chosen_weapon in weapon_list and chosen_weapon == "bow":
+				print "\nAh, the bow good choice, now you need to roll an even number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "axe":
-			print "\nAh, the axe good choice, now you need to roll an even number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+					break
+				else:
+					print " You lose!!"
+					dead()
+					break
+			elif chosen_weapon in weapon_list and chosen_weapon == "flamethrower":
+				print "\nAh, the flamethrower good choice, now you need to roll an even number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
-			print "\nAh, the spoon, hungry at a time like this???"
-			print "your dead"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+					break
+				else:
+					print " You lose!!"
+					dead()
+					break
+		elif answer == "2":
+			print "You have run away!! Try again and dont be such a scardie cat!"
 			dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "gun":
-			print "\nAh, the gun good choice, but you only have one bullet!"
-			print "You need an even number to shoot him!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "lipstick":
-			print "\nAh, the lipstick, not the best weopon against a monster"
-			dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "bat":
-			print "\nAh, the bat good choice, now you need to roll an even number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "bow":
-			print "\nAh, the bow good choice, now you need to roll an even number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "flamethrower":
-			print "\nAh, the flamethrower good choice, now you need to roll an even number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-	elif answer == "2":
-		print "You have run away!! Try again and dont be such a scardie cat!"
-		dead()
+			break
+		else:
+			print "Enter a valid number\n"
+			room_1()
 
 def room_2():
 	print "you enter the room 2 and see a big monster"
@@ -213,156 +225,161 @@ def room_2():
 	print "fight - 1"
 	print "Run away - 2"
 	answer = raw_input("> ")
-	if answer == "1":
-		print "\nI knew you were a fighter, now choose a weapon from your list %s\n" % weapon_list
-		chosen_weapon = raw_input ("> ")
-		if chosen_weapon in weapon_list and chosen_weapon == "sword":
-			print "\nAh, the sword good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+	while True:
+		if answer == "1":
+			print "\nI knew you were a fighter, now choose a weapon from your list %s\n" % weapon_list
+			chosen_weapon = raw_input ("> ")
+			if chosen_weapon in weapon_list and chosen_weapon == "sword":
+				print "\nAh, the sword good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "wand":
+				print "\nAh, the wand good choice, now you need to roll an ODD number to cas a magic spell"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "knife":
+				print "\nAh, the knife good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "axe":
+				print "\nAh, the axe good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
+				print "\nAh, the spoon, hungry at a time like this???"
+				print "your dead"
 				dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "wand":
-			print "\nAh, the wand good choice, now you need to roll an ODD number to cas a magic spell"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "gun":
+				print "\nAh, the gun good choice, but you only have one bullet!"
+				print "You need an ODD number to shoot him!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "lipstick":
+				print "\nAh, the lipstick, not the best weopon against a monster"
 				dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "knife":
-			print "\nAh, the knife good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "bat":
+				print "\nAh, the bat good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "axe":
-			print "\nAh, the axe good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "bow":
+				print "\nAh, the bow good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
-			print "\nAh, the spoon, hungry at a time like this???"
-			print "your dead"
+			elif chosen_weapon in weapon_list and chosen_weapon == "flamethrower":
+				print "\nAh, the flamethrower good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+			break
+		elif answer == "2":
+			print "You have run away!! Try again and dont be such a scardie cat!"
 			dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "gun":
-			print "\nAh, the gun good choice, but you only have one bullet!"
-			print "You need an ODD number to shoot him!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "lipstick":
-			print "\nAh, the lipstick, not the best weopon against a monster"
-			dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "bat":
-			print "\nAh, the bat good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "bow":
-			print "\nAh, the bow good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "flamethrower":
-			print "\nAh, the flamethrower good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-	elif answer == "2":
-		print "You have run away!! Try again and dont be such a scardie cat!"
-		dead()
+			break
+		else:
+			print "Enter a valid number\n"
+			room_2()
 
 def room_3():
 	print "you enter the room 3 and see a big monster"
@@ -370,156 +387,161 @@ def room_3():
 	print "fight - 1"
 	print "Run away - 2"
 	answer = raw_input("> ")
-	if answer == "1":
-		print "\nI knew you were a fighter, now choose a weapon from your list %s\n" % weapon_list
-		chosen_weapon = raw_input ("> ")
-		if chosen_weapon in weapon_list and chosen_weapon == "sword":
-			print "\nAh, the sword good choice, now you need to roll an EVEN number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+	while True:
+		if answer == "1":
+			print "\nI knew you were a fighter, now choose a weapon from your list %s\n" % weapon_list
+			chosen_weapon = raw_input ("> ")
+			if chosen_weapon in weapon_list and chosen_weapon == "sword":
+				print "\nAh, the sword good choice, now you need to roll an EVEN number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "wand":
+				print "\nAh, the wand good choice, now you need to roll an even number to cas a magic spell"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "knife":
+				print "\nAh, the knife good choice, now you need to roll an even number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "axe":
+				print "\nAh, the axe good choice, now you need to roll an even number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
+				print "\nAh, the spoon, hungry at a time like this???"
+				print "your dead"
 				dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "wand":
-			print "\nAh, the wand good choice, now you need to roll an even number to cas a magic spell"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "gun":
+				print "\nAh, the gun good choice, but you only have one bullet!"
+				print "You need an even number to shoot him!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "lipstick":
+				print "\nAh, the lipstick, not the best weopon against a monster"
 				dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "knife":
-			print "\nAh, the knife good choice, now you need to roll an even number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "bat":
+				print "\nAh, the bat good choice, now you need to roll an even number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "axe":
-			print "\nAh, the axe good choice, now you need to roll an even number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "bow":
+				print "\nAh, the bow good choice, now you need to roll an even number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
-			print "\nAh, the spoon, hungry at a time like this???"
-			print "your dead"
+			elif chosen_weapon in weapon_list and chosen_weapon == "flamethrower":
+				print "\nAh, the flamethrower good choice, now you need to roll an even number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+			break
+		elif answer == "2":
+			print "You have run away!! Try again and dont be such a scardie cat!"
 			dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "gun":
-			print "\nAh, the gun good choice, but you only have one bullet!"
-			print "You need an even number to shoot him!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "lipstick":
-			print "\nAh, the lipstick, not the best weopon against a monster"
-			dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "bat":
-			print "\nAh, the bat good choice, now you need to roll an even number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "bow":
-			print "\nAh, the bow good choice, now you need to roll an even number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "flamethrower":
-			print "\nAh, the flamethrower good choice, now you need to roll an even number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-	elif answer == "2":
-		print "You have run away!! Try again and dont be such a scardie cat!"
-		dead()
+			break
+		else:
+			print "Enter a valid number\n"
+			room_3()
 
 def room_4():
 	print "you enter the room 4 and see a big monster"
@@ -527,156 +549,161 @@ def room_4():
 	print "fight - 1"
 	print "Run away - 2"
 	answer = raw_input("> ")
-	if answer == "1":
-		print "\nI knew you were a fighter, now choose a weapon from your list %s\n" % weapon_list
-		chosen_weapon = raw_input ("> ")
-		if chosen_weapon in weapon_list and chosen_weapon == "sword":
-			print "\nAh, the sword good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+	while True:
+		if answer == "1":
+			print "\nI knew you were a fighter, now choose a weapon from your list %s\n" % weapon_list
+			chosen_weapon = raw_input ("> ")
+			if chosen_weapon in weapon_list and chosen_weapon == "sword":
+				print "\nAh, the sword good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "wand":
+				print "\nAh, the wand good choice, now you need to roll an ODD number to cas a magic spell"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "knife":
+				print "\nAh, the knife good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "axe":
+				print "\nAh, the axe good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
+				print "\nAh, the spoon, hungry at a time like this???"
+				print "your dead"
 				dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "wand":
-			print "\nAh, the wand good choice, now you need to roll an ODD number to cas a magic spell"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "gun":
+				print "\nAh, the gun good choice, but you only have one bullet!"
+				print "You need an ODD number to shoot him!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "lipstick":
+				print "\nAh, the lipstick, not the best weopon against a monster"
 				dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "knife":
-			print "\nAh, the knife good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "bat":
+				print "\nAh, the bat good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "axe":
-			print "\nAh, the axe good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "bow":
+				print "\nAh, the bow good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
-			print "\nAh, the spoon, hungry at a time like this???"
-			print "your dead"
+			elif chosen_weapon in weapon_list and chosen_weapon == "flamethrower":
+				print "\nAh, the flamethrower good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+			break
+		elif answer == "2":
+			print "You have run away!! Try again and dont be such a scardie cat!"
 			dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "gun":
-			print "\nAh, the gun good choice, but you only have one bullet!"
-			print "You need an ODD number to shoot him!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "lipstick":
-			print "\nAh, the lipstick, not the best weopon against a monster"
-			dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "bat":
-			print "\nAh, the bat good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "bow":
-			print "\nAh, the bow good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "flamethrower":
-			print "\nAh, the flamethrower good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-	elif answer == "2":
-		print "You have run away!! Try again and dont be such a scardie cat!"
-		dead()
+			break
+		else:
+			print "Enter a valid number\n"
+			room_4()
 
 def room_5():
 	print "you enter the room 5 and see a big monster"
@@ -684,156 +711,161 @@ def room_5():
 	print "fight - 1"
 	print "Run away - 2"
 	answer = raw_input("> ")
-	if answer == "1":
-		print "\nI knew you were a fighter, now choose a weapon from your list %s\n" % weapon_list
-		chosen_weapon = raw_input ("> ")
-		if chosen_weapon in weapon_list and chosen_weapon == "sword":
-			print "\nAh, the sword good choice, now you need to roll an EVEN number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+	while True:
+		if answer == "1":
+			print "\nI knew you were a fighter, now choose a weapon from your list %s\n" % weapon_list
+			chosen_weapon = raw_input ("> ")
+			if chosen_weapon in weapon_list and chosen_weapon == "sword":
+				print "\nAh, the sword good choice, now you need to roll an EVEN number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "wand":
+				print "\nAh, the wand good choice, now you need to roll an even number to cas a magic spell"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "knife":
+				print "\nAh, the knife good choice, now you need to roll an even number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "axe":
+				print "\nAh, the axe good choice, now you need to roll an even number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
+				print "\nAh, the spoon, hungry at a time like this???"
+				print "your dead"
 				dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "wand":
-			print "\nAh, the wand good choice, now you need to roll an even number to cas a magic spell"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "gun":
+				print "\nAh, the gun good choice, but you only have one bullet!"
+				print "You need an even number to shoot him!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "lipstick":
+				print "\nAh, the lipstick, not the best weopon against a monster"
 				dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "knife":
-			print "\nAh, the knife good choice, now you need to roll an even number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "bat":
+				print "\nAh, the bat good choice, now you need to roll an even number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "axe":
-			print "\nAh, the axe good choice, now you need to roll an even number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "bow":
+				print "\nAh, the bow good choice, now you need to roll an even number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
-			print "\nAh, the spoon, hungry at a time like this???"
-			print "your dead"
+			elif chosen_weapon in weapon_list and chosen_weapon == "flamethrower":
+				print "\nAh, the flamethrower good choice, now you need to roll an even number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 0:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+			break
+		elif answer == "2":
+			print "You have run away!! Try again and dont be such a scardie cat!"
 			dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "gun":
-			print "\nAh, the gun good choice, but you only have one bullet!"
-			print "You need an even number to shoot him!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "lipstick":
-			print "\nAh, the lipstick, not the best weopon against a monster"
-			dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "bat":
-			print "\nAh, the bat good choice, now you need to roll an even number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "bow":
-			print "\nAh, the bow good choice, now you need to roll an even number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "flamethrower":
-			print "\nAh, the flamethrower good choice, now you need to roll an even number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 0:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-	elif answer == "2":
-		print "You have run away!! Try again and dont be such a scardie cat!"
-		dead()
+			break
+		else:
+			print "Enter a valid number\n"
+			room_5()
 
 def room_6():
 	print "you enter the room 6 and see a big monster"
@@ -841,156 +873,161 @@ def room_6():
 	print "fight - 1"
 	print "Run away - 2"
 	answer = raw_input("> ")
-	if answer == "1":
-		print "\nI knew you were a fighter, now choose a weapon from your list %s\n" % weapon_list
-		chosen_weapon = raw_input ("> ")
-		if chosen_weapon in weapon_list and chosen_weapon == "sword":
-			print "\nAh, the sword good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+	while True:
+		if answer == "1":
+			print "\nI knew you were a fighter, now choose a weapon from your list %s\n" % weapon_list
+			chosen_weapon = raw_input ("> ")
+			if chosen_weapon in weapon_list and chosen_weapon == "sword":
+				print "\nAh, the sword good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "wand":
+				print "\nAh, the wand good choice, now you need to roll an ODD number to cas a magic spell"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "knife":
+				print "\nAh, the knife good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "axe":
+				print "\nAh, the axe good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
+				print "\nAh, the spoon, hungry at a time like this???"
+				print "your dead"
 				dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "wand":
-			print "\nAh, the wand good choice, now you need to roll an ODD number to cas a magic spell"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "gun":
+				print "\nAh, the gun good choice, but you only have one bullet!"
+				print "You need an ODD number to shoot him!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "lipstick":
+				print "\nAh, the lipstick, not the best weopon against a monster"
 				dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "knife":
-			print "\nAh, the knife good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "bat":
+				print "\nAh, the bat good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "axe":
-			print "\nAh, the axe good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "bow":
+				print "\nAh, the bow good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
-			print "\nAh, the spoon, hungry at a time like this???"
-			print "your dead"
+			elif chosen_weapon in weapon_list and chosen_weapon == "flamethrower":
+				print "\nAh, the flamethrower good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+			break
+		elif answer == "2":
+			print "You have run away!! Try again and dont be such a scardie cat!"
 			dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "gun":
-			print "\nAh, the gun good choice, but you only have one bullet!"
-			print "You need an ODD number to shoot him!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "lipstick":
-			print "\nAh, the lipstick, not the best weopon against a monster"
-			dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "bat":
-			print "\nAh, the bat good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "bow":
-			print "\nAh, the bow good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "flamethrower":
-			print "\nAh, the flamethrower good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-	elif answer == "2":
-		print "You have run away!! Try again and dont be such a scardie cat!"
-		dead()
+			break
+		else:
+			print "Enter a valid number\n"
+			room_6()
 
 def room_7():
     print "you enter the room and see a big monster sat by a door sleeping"
@@ -998,162 +1035,163 @@ def room_7():
     print "Fight the monter - 2"
     print "Run away - 3"
     answer = raw_input("> ")
-    if answer == "1":
-        print "You poke the stick at the monster and it moves away from the door"
-        print "What do you want to do now?"
-        print "Go through the door - 1"
-        print "poke the monster again - 2"
-        print "fight the monster - 3"
-        question_answer = raw_input("> ")
-        if question_answer == "1":
-            print "well done you got out alive!"
-        elif question_answer == "2":
-            print "You made him angry this time and he eats you up!"
-            dead()
-        elif question_answer == "3":
-            print "You ran away!"
-            dead()
-        else:
-            print "test"
-    elif answer == "2":
-        print "\nI knew you were a fighter, now choose a weapon from your list %s\n" % weapon_list
-        chosen_weapon = raw_input ("> ")
-        if chosen_weapon in weapon_list and chosen_weapon == "sword":
-            print "\nAh, the sword good choice, now you need to roll an ODD number to win"
-            print "Otherwise you will die!\n"
-            raw_input("Press ENTER to roll \n ")
-            print "Rolling\n"
-            delay_print("....dont be scared........\n\n")
-            room1_sword = random.randint(1,6)
-            print " You got a : %d \n " % room1_sword
-            if room1_sword % 2 == 1:
-                print "You Win!!!"
-                weapon_list.remove(chosen_weapon)
-            else:
-                print " You lose!!"
-                dead()
-        elif chosen_weapon in weapon_list and chosen_weapon == "wand":
-    		print "\nAh, the wand good choice, now you need to roll an ODD number to cas a magic spell"
-    		print "Otherwise you will die!\n"
-    		raw_input("Press ENTER to roll \n ")
+    while True:
+		if answer == "1":
+			print "You poke the stick at the monster and it moves away from the door"
+			print "What do you want to do now?"
+			print "Go through the door - 1"
+			print "poke the monster again - 2"
+			print "fight the monster - 3"
+			question_answer = raw_input("> ")
+			if question_answer == "1":
+				print "well done you got out alive!"
+			elif question_answer == "2":
+				print "You made him angry this time and he eats you up!"
+				dead()
+			elif question_answer == "3":
+				print "You ran away!"
+				dead()
+			else:
+				print "test"
+		elif answer == "2":
+			print "\nI knew you were a fighter, now choose a weapon from your list %s\n" % weapon_list
+			chosen_weapon = raw_input ("> ")
+			if chosen_weapon in weapon_list and chosen_weapon == "sword":
+				print "\nAh, the sword good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+			elif chosen_weapon in weapon_list and chosen_weapon == "wand":
+				print "\nAh, the wand good choice, now you need to roll an ODD number to cas a magic spell"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-    		print "Rolling\n"
-    		delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-    		room1_sword = random.randint(1,6)
-    		print " You got a : %d \n " % room1_sword
-    		if room1_sword % 2 == 1:
-    			print "You Win!!!"
-    			weapon_list.remove(chosen_weapon)
-    		else:
-    			print " You lose!!"
-    			dead()
-        elif chosen_weapon in weapon_list and chosen_weapon == "knife":
-    		print "\nAh, the knife good choice, now you need to roll an ODD number to win"
-    		print "Otherwise you will die!\n"
-    		raw_input("Press ENTER to roll \n ")
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+			elif chosen_weapon in weapon_list and chosen_weapon == "knife":
+				print "\nAh, the knife good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-    		print "Rolling\n"
-    		delay_print("....dont be scared........\n\n")
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+			elif chosen_weapon in weapon_list and chosen_weapon == "axe":
+				print "\nAh, the axe good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-    		room1_sword = random.randint(1,6)
-    		print " You got a : %d \n " % room1_sword
-    		if room1_sword % 2 == 1:
-    			print "You Win!!!"
-    			weapon_list.remove(chosen_weapon)
-    		else:
-    			print " You lose!!"
-    			dead()
-        elif chosen_weapon in weapon_list and chosen_weapon == "axe":
-    		print "\nAh, the axe good choice, now you need to roll an ODD number to win"
-    		print "Otherwise you will die!\n"
-    		raw_input("Press ENTER to roll \n ")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+			elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
+				print "\nAh, the spoon, hungry at a time like this???"
+				print "your dead"
+				dead()
+			elif chosen_weapon in weapon_list and chosen_weapon == "gun":
+				print "\nAh, the gun good choice, but you only have one bullet!"
+				print "You need an ODD number to shoot him!\n"
+				raw_input("Press ENTER to roll \n ")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+			elif chosen_weapon in weapon_list and chosen_weapon == "lipstick":
+				print "\nAh, the lipstick, not the best weopon against a monster"
+				dead()
+			elif chosen_weapon in weapon_list and chosen_weapon == "bat":
+				print "\nAh, the bat good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-    		print "Rolling\n"
-    		delay_print("....dont be scared........\n\n")
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
 
-    		room1_sword = random.randint(1,6)
-    		print " You got a : %d \n " % room1_sword
-    		if room1_sword % 2 == 1:
-    			print "You Win!!!"
-    			weapon_list.remove(chosen_weapon)
-    		else:
-    			print " You lose!!"
-        elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
-    		print "\nAh, the spoon, hungry at a time like this???"
-    		print "your dead"
-    		dead()
-        elif chosen_weapon in weapon_list and chosen_weapon == "gun":
-    		print "\nAh, the gun good choice, but you only have one bullet!"
-    		print "You need an ODD number to shoot him!\n"
-    		raw_input("Press ENTER to roll \n ")
-    		print "Rolling\n"
-    		delay_print("....dont be scared........\n\n")
-    		room1_sword = random.randint(1,6)
-    		print " You got a : %d \n " % room1_sword
-    		if room1_sword % 2 == 1:
-    			print "You Win!!!"
-    			weapon_list.remove(chosen_weapon)
-    		else:
-    			print " You lose!!"
-    			dead()
-        elif chosen_weapon in weapon_list and chosen_weapon == "lipstick":
-    		print "\nAh, the lipstick, not the best weopon against a monster"
-    		dead()
-        elif chosen_weapon in weapon_list and chosen_weapon == "bat":
-    		print "\nAh, the bat good choice, now you need to roll an ODD number to win"
-    		print "Otherwise you will die!\n"
-    		raw_input("Press ENTER to roll \n ")
-    		print "Rolling\n"
-    		delay_print("....dont be scared........\n\n")
+			elif chosen_weapon in weapon_list and chosen_weapon == "bow":
+				print "\nAh, the bow good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-    		room1_sword = random.randint(1,6)
-    		print " You got a : %d \n " % room1_sword
-    		if room1_sword % 2 == 1:
-    			print "You Win!!!"
-    			weapon_list.remove(chosen_weapon)
-    		else:
-    			print " You lose!!"
-    			dead()
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-        elif chosen_weapon in weapon_list and chosen_weapon == "bow":
-            print "\nAh, the bow good choice, now you need to roll an ODD number to win"
-            print "Otherwise you will die!\n"
-            raw_input("Press ENTER to roll \n ")
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
 
-            print "Rolling\n"
-            delay_print("....dont be scared........\n\n")
+			elif chosen_weapon in weapon_list and chosen_weapon == "flamethrower":
+				print "\nAh, the flamethrower good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-            room1_sword = random.randint(1,6)
-            print " You got a : %d \n " % room1_sword
-            if room1_sword % 2 == 1:
-                print "You Win!!!"
-                weapon_list.remove(chosen_weapon)
-            else:
-                print " You lose!!"
-                dead()
-
-        elif chosen_weapon in weapon_list and chosen_weapon == "flamethrower":
-            print "\nAh, the flamethrower good choice, now you need to roll an ODD number to win"
-            print "Otherwise you will die!\n"
-            aw_input("Press ENTER to roll \n ")
-
-            print "Rolling\n"
-            delay_print("....dont be scared........\n\n")
-
-            room1_sword = random.randint(1,6)
-            print " You got a : %d \n " % room1_sword
-            if room1_sword % 2 == 1:
-                print "You Win!!!"
-                weapon_list.remove(chosen_weapon)
-            else:
-                print " You lose!!"
-                dead()
-    elif answer == "3":
-    	print "You have run away!! Try again and dont be such a scardie cat!"
-    	dead()
-    else:
-    	dead()
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+			break
+		elif answer == "3":
+			print "You have run away!! Try again and dont be such a scardie cat!"
+			dead()
+			break
+		else:
+			print "Enter a valid number\n"
+			room_7()
 
 def room_8():
 	print "you enter the room and see a big monster"
@@ -1161,156 +1199,161 @@ def room_8():
 	print "fight - 1"
 	print "Run away - 2"
 	answer = raw_input("> ")
-	if answer == "1":
-		print "\nI knew you were a fighter, now choose a weapon from your list %s\n" % weapon_list
-		chosen_weapon = raw_input ("> ")
-		if chosen_weapon in weapon_list and chosen_weapon == "sword":
-			print "\nAh, the sword good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+	while True:
+		if answer == "1":
+			print "\nI knew you were a fighter, now choose a weapon from your list %s\n" % weapon_list
+			chosen_weapon = raw_input ("> ")
+			if chosen_weapon in weapon_list and chosen_weapon == "sword":
+				print "\nAh, the sword good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "wand":
+				print "\nAh, the wand good choice, now you need to roll an ODD number to cas a magic spell"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "knife":
+				print "\nAh, the knife good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "axe":
+				print "\nAh, the axe good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
+				print "\nAh, the spoon, hungry at a time like this???"
+				print "your dead"
 				dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "wand":
-			print "\nAh, the wand good choice, now you need to roll an ODD number to cas a magic spell"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "gun":
+				print "\nAh, the gun good choice, but you only have one bullet!"
+				print "You need an ODD number to shoot him!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "lipstick":
+				print "\nAh, the lipstick, not the best weopon against a monster"
 				dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "knife":
-			print "\nAh, the knife good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "bat":
+				print "\nAh, the bat good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "axe":
-			print "\nAh, the axe good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "bow":
+				print "\nAh, the bow good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
-			print "\nAh, the spoon, hungry at a time like this???"
-			print "your dead"
+			elif chosen_weapon in weapon_list and chosen_weapon == "flamethrower":
+				print "\nAh, the flamethrower good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+			break
+		elif answer == "2":
+			print "You have run away!! Try again and dont be such a scardie cat!"
 			dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "gun":
-			print "\nAh, the gun good choice, but you only have one bullet!"
-			print "You need an ODD number to shoot him!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "lipstick":
-			print "\nAh, the lipstick, not the best weopon against a monster"
-			dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "bat":
-			print "\nAh, the bat good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "bow":
-			print "\nAh, the bow good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "flamethrower":
-			print "\nAh, the flamethrower good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-	elif answer == "2":
-		print "You have run away!! Try again and dont be such a scardie cat!"
-		dead()
+			break
+		else:
+			print "Enter a valid number\n"
+			room_8()
 
 def room_9():
 	print "you enter the room and see a princess held captive"
@@ -1318,156 +1361,161 @@ def room_9():
 	print "Save her - 1"
 	print "Run away - 2"
 	answer = raw_input("> ")
-	if answer == "1":
-		print "\nI knew you were brave, choose your weapon! %s\n" % weapon_list
-		chosen_weapon = raw_input ("> ")
-		if chosen_weapon in weapon_list and chosen_weapon == "sword":
-			print "\nAh, the sword good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+	while True:
+		if answer == "1":
+			print "\nI knew you were brave, choose your weapon! %s\n" % weapon_list
+			chosen_weapon = raw_input ("> ")
+			if chosen_weapon in weapon_list and chosen_weapon == "sword":
+				print "\nAh, the sword good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "wand":
+				print "\nAh, the wand good choice, now you need to roll an ODD number to cas a magic spell"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "knife":
+				print "\nAh, the knife good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "axe":
+				print "\nAh, the axe good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
+				print "\nAh, the spoon, hungry at a time like this???"
+				print "your dead"
 				dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "wand":
-			print "\nAh, the wand good choice, now you need to roll an ODD number to cas a magic spell"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "gun":
+				print "\nAh, the gun good choice, but you only have one bullet!"
+				print "You need an ODD number to shoot him!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "lipstick":
+				print "\nAh, the lipstick, not the best weopon against a monster"
 				dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "knife":
-			print "\nAh, the knife good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "bat":
+				print "\nAh, the bat good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "axe":
-			print "\nAh, the axe good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "bow":
+				print "\nAh, the bow good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
-			print "\nAh, the spoon, hungry at a time like this???"
-			print "your dead"
+			elif chosen_weapon in weapon_list and chosen_weapon == "flamethrower":
+				print "\nAh, the flamethrower good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+			break
+		elif answer == "2":
+			print "You have run away!! Try again and dont be such a scardie cat!"
 			dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "gun":
-			print "\nAh, the gun good choice, but you only have one bullet!"
-			print "You need an ODD number to shoot him!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "lipstick":
-			print "\nAh, the lipstick, not the best weopon against a monster"
-			dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "bat":
-			print "\nAh, the bat good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "bow":
-			print "\nAh, the bow good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "flamethrower":
-			print "\nAh, the flamethrower good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-	elif answer == "2":
-		print "You have run away!! Try again and dont be such a scardie cat!"
-		dead()
+			break
+		else:
+			print "Enter a valid number\n"
+			room_9()
 
 def room_10():
 	print "you enter the room and see a new iphone lying on the floor, you think it belongs to someone else."
@@ -1475,11 +1523,17 @@ def room_10():
 	print "Take the Iphone - 1"
 	print "Leave throught the door - 2"
 	answer = raw_input("> ")
-	if answer == "1":
-		print "\nIts wrong to steal! That was a test! %\n"
-		dead()
-	elif answer == "2":
-		print "Well done that was a test, you passed!\n"
+	while True:
+		if answer == "1":
+			print "\nIts wrong to steal! That was a test! %\n"
+			dead()
+			break
+		elif answer == "2":
+			print "Well done that was a test, you passed!\n"
+			break
+		else:
+			print "Enter a valid number\n"
+			room_10()
 
 def room_11():
 	print "you enter the room with lava all over the floor"
@@ -1488,11 +1542,17 @@ def room_11():
 	print "Left - 1"
 	print "Right - 2"
 	answer = raw_input("> ")
-	if answer == "1":
-		print "\nThe bridge on the left you say, you walk accross safley.\n"
-	elif answer == "2":
-		print "Oh no! The bridge collapes and you fall in the lava!"
-		dead()
+	while True:
+		if answer == "1":
+			print "\nThe bridge on the left you say, you walk accross safley.\n"
+			break
+		elif answer == "2":
+			print "Oh no! The bridge collapes and you fall in the lava!"
+			dead()
+			break
+		else:
+			print "Enter a valid number\n"
+			room_11()
 
 def room_12():
 	print "you enter the room and see a big monster"
@@ -1500,156 +1560,161 @@ def room_12():
 	print "fight - 1"
 	print "Run away - 2"
 	answer = raw_input("> ")
-	if answer == "1":
-		print "\nI knew you were a fighter, now choose a weapon from your list %s\n" % weapon_list
-		chosen_weapon = raw_input ("> ")
-		if chosen_weapon in weapon_list and chosen_weapon == "sword":
-			print "\nAh, the sword good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+	while True:
+		if answer == "1":
+			print "\nI knew you were a fighter, now choose a weapon from your list %s\n" % weapon_list
+			chosen_weapon = raw_input ("> ")
+			if chosen_weapon in weapon_list and chosen_weapon == "sword":
+				print "\nAh, the sword good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "wand":
+				print "\nAh, the wand good choice, now you need to roll an ODD number to cas a magic spell"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "knife":
+				print "\nAh, the knife good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "axe":
+				print "\nAh, the axe good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
+				print "\nAh, the spoon, hungry at a time like this???"
+				print "your dead"
 				dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "wand":
-			print "\nAh, the wand good choice, now you need to roll an ODD number to cas a magic spell"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "gun":
+				print "\nAh, the gun good choice, but you only have one bullet!"
+				print "You need an ODD number to shoot him!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+
+			elif chosen_weapon in weapon_list and chosen_weapon == "lipstick":
+				print "\nAh, the lipstick, not the best weopon against a monster"
 				dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "knife":
-			print "\nAh, the knife good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "bat":
+				print "\nAh, the bat good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "axe":
-			print "\nAh, the axe good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
+			elif chosen_weapon in weapon_list and chosen_weapon == "bow":
+				print "\nAh, the bow good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
 
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
 
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
 
-		elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
-			print "\nAh, the spoon, hungry at a time like this???"
-			print "your dead"
+			elif chosen_weapon in weapon_list and chosen_weapon == "flamethrower":
+				print "\nAh, the flamethrower good choice, now you need to roll an ODD number to win"
+				print "Otherwise you will die!\n"
+				raw_input("Press ENTER to roll \n ")
+
+				print "Rolling\n"
+				delay_print("....dont be scared........\n\n")
+
+				room1_sword = random.randint(1,6)
+				print " You got a : %d \n " % room1_sword
+				if room1_sword % 2 == 1:
+					print "You Win!!!"
+					weapon_list.remove(chosen_weapon)
+				else:
+					print " You lose!!"
+					dead()
+			break
+		elif answer == "2":
+			print "You have run away!! Try again and dont be such a scardie cat!"
 			dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "gun":
-			print "\nAh, the gun good choice, but you only have one bullet!"
-			print "You need an ODD number to shoot him!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "lipstick":
-			print "\nAh, the lipstick, not the best weopon against a monster"
-			dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "bat":
-			print "\nAh, the bat good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "bow":
-			print "\nAh, the bow good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-		elif chosen_weapon in weapon_list and chosen_weapon == "flamethrower":
-			print "\nAh, the flamethrower good choice, now you need to roll an ODD number to win"
-			print "Otherwise you will die!\n"
-			raw_input("Press ENTER to roll \n ")
-
-			print "Rolling\n"
-			delay_print("....dont be scared........\n\n")
-
-			room1_sword = random.randint(1,6)
-			print " You got a : %d \n " % room1_sword
-			if room1_sword % 2 == 1:
-				print "You Win!!!"
-				weapon_list.remove(chosen_weapon)
-			else:
-				print " You lose!!"
-				dead()
-
-	elif answer == "2":
-		print "You have run away!! Try again and dont be such a scardie cat!"
-		dead()
+			break
+		else:
+			print "Enter a valid number\n"
+			room_12()
 
 def level_1():
 	raw_input("Press ENTER to roll \n ")
@@ -1657,7 +1722,7 @@ def level_1():
 	print "Rolling\n"
 	delay_print("............\n\n")
 
-	dice = random.randint(1,6)
+	dice = 1 #random.randint(1,6)
 	print " You got a : %d \n " % dice
 
 	if dice == 1:
@@ -1710,7 +1775,6 @@ def level_2():
 def level_3():
 	print "You are almost there!"
 	print "you enter the last room with the big bad inside"
-
 
 def big_bad():
 	print "you enter the room and see the big bad"
@@ -1796,9 +1860,6 @@ def big_bad():
 			else:
 				print " You lose!!"
 				dead()
-
-
-
 
 name = raw_input("welcome to the game, whats your name? \n ")
 
