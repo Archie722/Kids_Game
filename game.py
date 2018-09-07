@@ -48,6 +48,7 @@ def delay_print(s):
 
 def dead():
 	print "Try again another time"
+	exit(0)
 
 def room_1():
 	print "you enter the room 1 and see a big monster"
@@ -72,11 +73,12 @@ def room_1():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
-					break
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
-					break
+
+
 			elif chosen_weapon in weapon_list and chosen_weapon == "wand":
 				print "\nAh, the wand good choice, now you need to roll an even number to cas a magic spell"
 				print "Otherwise you will die!\n"
@@ -90,11 +92,10 @@ def room_1():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
-					break
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
-					break
 			elif chosen_weapon in weapon_list and chosen_weapon == "knife":
 				print "\nAh, the knife good choice, now you need to roll an even number to win"
 				print "Otherwise you will die!\n"
@@ -108,11 +109,10 @@ def room_1():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
-					break
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
-					break
 			elif chosen_weapon in weapon_list and chosen_weapon == "axe":
 				print "\nAh, the axe good choice, now you need to roll an even number to win"
 				print "Otherwise you will die!\n"
@@ -126,15 +126,14 @@ def room_1():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
-					break
+					level_2()
 				else:
 					print " You lose!!"
-					break
+					dead()
 			elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
 				print "\nAh, the spoon, hungry at a time like this???"
 				print "your dead"
 				dead()
-				break
 			elif chosen_weapon in weapon_list and chosen_weapon == "gun":
 				print "\nAh, the gun good choice, but you only have one bullet!"
 				print "You need an even number to shoot him!\n"
@@ -148,15 +147,13 @@ def room_1():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
-					break
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
-					break
 			elif chosen_weapon in weapon_list and chosen_weapon == "lipstick":
 				print "\nAh, the lipstick, not the best weopon against a monster"
 				dead()
-				break
 			elif chosen_weapon in weapon_list and chosen_weapon == "bat":
 				print "\nAh, the bat good choice, now you need to roll an even number to win"
 				print "Otherwise you will die!\n"
@@ -170,11 +167,10 @@ def room_1():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
-					break
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
-					break
 			elif chosen_weapon in weapon_list and chosen_weapon == "bow":
 				print "\nAh, the bow good choice, now you need to roll an even number to win"
 				print "Otherwise you will die!\n"
@@ -188,7 +184,7 @@ def room_1():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
-					break
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -206,15 +202,13 @@ def room_1():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
-					break
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
-					break
 		elif answer == "2":
 			print "You have run away!! Try again and dont be such a scardie cat!"
 			dead()
-			break
 		else:
 			print "Enter a valid number\n"
 			room_1()
@@ -242,6 +236,7 @@ def room_2():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -259,6 +254,7 @@ def room_2():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -276,6 +272,7 @@ def room_2():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -293,8 +290,10 @@ def room_2():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
+					dead()
 
 			elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
 				print "\nAh, the spoon, hungry at a time like this???"
@@ -314,6 +313,7 @@ def room_2():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -335,6 +335,7 @@ def room_2():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -352,6 +353,7 @@ def room_2():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -404,6 +406,7 @@ def room_3():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -421,6 +424,7 @@ def room_3():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -438,6 +442,7 @@ def room_3():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -455,8 +460,10 @@ def room_3():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
+					dead()
 
 			elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
 				print "\nAh, the spoon, hungry at a time like this???"
@@ -476,6 +483,7 @@ def room_3():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -497,6 +505,7 @@ def room_3():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -514,6 +523,7 @@ def room_3():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -531,6 +541,7 @@ def room_3():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -566,6 +577,7 @@ def room_4():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -583,6 +595,7 @@ def room_4():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -600,6 +613,7 @@ def room_4():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -617,8 +631,10 @@ def room_4():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
+					dead()
 
 			elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
 				print "\nAh, the spoon, hungry at a time like this???"
@@ -638,6 +654,7 @@ def room_4():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -676,6 +693,7 @@ def room_4():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -693,6 +711,7 @@ def room_4():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -700,7 +719,6 @@ def room_4():
 		elif answer == "2":
 			print "You have run away!! Try again and dont be such a scardie cat!"
 			dead()
-			break
 		else:
 			print "Enter a valid number\n"
 			room_4()
@@ -728,6 +746,7 @@ def room_5():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -745,6 +764,7 @@ def room_5():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -762,6 +782,7 @@ def room_5():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -779,6 +800,7 @@ def room_5():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 
@@ -800,6 +822,7 @@ def room_5():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -821,6 +844,7 @@ def room_5():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -838,6 +862,7 @@ def room_5():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -855,14 +880,14 @@ def room_5():
 				if room1_sword % 2 == 0:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
-			break
 		elif answer == "2":
 			print "You have run away!! Try again and dont be such a scardie cat!"
 			dead()
-			break
+
 		else:
 			print "Enter a valid number\n"
 			room_5()
@@ -890,6 +915,7 @@ def room_6():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -907,6 +933,7 @@ def room_6():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -924,6 +951,7 @@ def room_6():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -941,8 +969,10 @@ def room_6():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
+					dead()
 
 			elif chosen_weapon in weapon_list and chosen_weapon == "spoon":
 				print "\nAh, the spoon, hungry at a time like this???"
@@ -962,6 +992,7 @@ def room_6():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -983,6 +1014,7 @@ def room_6():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -1000,6 +1032,7 @@ def room_6():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					level_2()
 				else:
 					print " You lose!!"
 					dead()
@@ -1017,6 +1050,7 @@ def room_6():
 				if room1_sword % 2 == 1:
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
+					
 				else:
 					print " You lose!!"
 					dead()
@@ -1722,7 +1756,7 @@ def level_1():
 	print "Rolling\n"
 	delay_print("............\n\n")
 
-	dice = 1 #random.randint(1,6)
+	dice = 1#random.randint(1,6)
 	print " You got a : %d \n " % dice
 
 	if dice == 1:
@@ -1745,6 +1779,8 @@ def level_1():
 		room_6()
 
 def level_2():
+	print "Welcome to level 2! Now you need to role a dice to choose a door:\n"
+
 	raw_input("Press ENTER to roll \n ")
 
 	print "Rolling\n"
