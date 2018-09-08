@@ -66,7 +66,7 @@ def room_1():
 				raw_input("Press ENTER to roll \n ")
 
 				print "Rolling\n"
-				delay_print("....dont be scared %s........\n\n") % name
+				delay_print("....dont be scared........\n\n")
 
 				room1_sword = random.randint(1,6)
 				print " You got a : %d \n " % room1_sword
@@ -87,7 +87,7 @@ def room_1():
 				raw_input("Press ENTER to roll \n ")
 
 				print "Rolling\n"
-				delay_print("....dont be scared %s........\n") % name
+				delay_print("....dont be scared ........\n")
 
 				room1_sword = random.randint(1,6)
 				print " You got a : %d \n " % room1_sword
@@ -106,7 +106,7 @@ def room_1():
 				raw_input("Press ENTER to roll \n ")
 
 				print "Rolling\n"
-				delay_print("....dont be scared %s........\n\n") % name
+				delay_print("....dont be scared........\n\n")
 
 				room1_sword = random.randint(1,6)
 				print " You got a : %d \n " % room1_sword
@@ -125,7 +125,7 @@ def room_1():
 				raw_input("Press ENTER to roll \n ")
 
 				print "Rolling\n"
-				delay_print("....dont be scared %s........\n\n") % name
+				delay_print("....dont be scared ........\n\n")
 
 				room1_sword = random.randint(1,6)
 				print " You got a : %d \n " % room1_sword
@@ -149,7 +149,7 @@ def room_1():
 				raw_input("Press ENTER to roll \n ")
 
 				print "Rolling\n"
-				delay_print("....dont be scared %s........\n") % name
+				delay_print("....dont be scared........\n")
 
 				room1_sword = random.randint(1,6)
 				print " You got a : %d \n " % room1_sword
@@ -396,7 +396,7 @@ def room_2():
 			room_2()
 
 def room_3():
-	print "you enter the room 3 and see a big monster"
+	print "you enter the room 3 and see a big snake!"
 	print "Do you want to fight or run away?"
 	print "fight - 1"
 	print "Run away - 2"
@@ -416,10 +416,12 @@ def room_3():
 				room1_sword = random.randint(1,6)
 				print " You got a : %d \n " % room1_sword
 				if room1_sword % 2 == 0:
+					print "You slash at the sanke and cut it in half!"
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
 					level_2()
 				else:
+					print "The snake slithers its way toward you and bites you!"
 					print " You lose!!"
 					dead()
 
@@ -434,10 +436,12 @@ def room_3():
 				room1_sword = random.randint(1,6)
 				print " You got a : %d \n " % room1_sword
 				if room1_sword % 2 == 0:
+					print "You cast a magic spell and turn the snake into a mouse!"
 					print "You Win!!!"
 					weapon_list.remove(chosen_weapon)
 					level_2()
 				else:
+					print "Your spell doesnt work and the snke kills you!"
 					print " You lose!!"
 					dead()
 
@@ -567,7 +571,7 @@ def room_3():
 			room_3()
 
 def room_4():
-	print "you enter the room 4 and see a big monster"
+	print "you enter the room 4 and see a giant rat!!"
 	print "Do you want to fight or run away?"
 	print "fight - 1"
 	print "Run away - 2"
